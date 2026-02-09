@@ -13,12 +13,14 @@
   --bg:#f4f6f9;
 }
 
+/* พื้นฐาน */
 body{
   font-family:Tahoma,sans-serif;
   margin:0;
   background:var(--bg);
 }
 
+/* Header / Footer */
 header,footer{
   background:var(--main-blue);
   color:white;
@@ -26,6 +28,7 @@ header,footer{
   padding:20px;
 }
 
+/* เมนู */
 nav{
   background:var(--sub-blue);
   text-align:center;
@@ -34,7 +37,6 @@ nav{
   top:0;
   z-index:1000;
 }
-
 nav a{
   color:white;
   margin:0 12px;
@@ -42,8 +44,8 @@ nav a{
   font-weight:bold;
 }
 
+/* Section */
 section{padding:30px 20px;}
-
 .card{
   background:white;
   padding:20px;
@@ -51,6 +53,7 @@ section{padding:30px 20px;}
   margin-bottom:25px;
 }
 
+/* ปุ่ม */
 .level-pvch{background:var(--pvch);}
 .level-pvs{background:var(--pvs);}
 
@@ -63,10 +66,13 @@ section{padding:30px 20px;}
   font-weight:bold;
   margin:6px 6px 10px 0;
 }
+.download-btn:hover{opacity:0.9;}
 
+/* อื่น ๆ */
 .desc{font-size:14px;color:#444;}
 .note{font-size:14px;color:#555;margin-top:10px;}
 
+/* PDF Viewer */
 .viewer{
   width:100%;
   height:550px;
@@ -75,7 +81,7 @@ section{padding:30px 20px;}
   margin-top:15px;
 }
 
-/* ปุ่มกลับด้านบน */
+/* ปุ่มกลับขึ้นบน */
 #topBtn{
   position:fixed;
   bottom:30px;
@@ -88,6 +94,7 @@ section{padding:30px 20px;}
   cursor:pointer;
   font-size:18px;
   display:none;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
 }
 #topBtn:hover{background:var(--sub-blue);}
 </style>
@@ -96,7 +103,7 @@ section{padding:30px 20px;}
 <body>
 
 <header>
-  <img src="images/logo.png" style="height:80px;"><br>
+  <img src="images/logo.png" alt="โลโก้วิทยาลัย" style="height:80px;"><br>
   <h1>วิทยาลัยเทคโนโลยีไทย-ไต้หวัน (บีดีไอ)</h1>
   <p>รายวิชาโครงงาน</p>
 </header>
@@ -109,15 +116,19 @@ section{padding:30px 20px;}
 
 <!-- ตัวอย่างโครงงาน -->
 <section id="projects">
+
 <div class="card">
 <h2>📘 ตัวอย่างโครงงาน ระดับ ปวช.</h2>
 <p class="desc">💻 <b>เทคโนโลยีธุรกิจดิจิทัล</b></p>
 
 <a class="download-btn level-pvch"
-   href="files/ปวช/ธุรกิจดิจิทัล.pdf" download>⬇️ ดาวน์โหลด PDF</a>
+   href="files/ปวช/ธุรกิจดิจิทัล.pdf" download>
+📄 ดาวน์โหลด PDF
+</a>
 
 <iframe class="viewer"
- src="files/ปวช/ธุรกิจดิจิทัล.pdf"></iframe>
+  src="files/ปวช/ธุรกิจดิจิทัล.pdf">
+</iframe>
 
 <p class="note">หมายเหตุ: ใช้เพื่อการศึกษาเท่านั้น</p>
 </div>
@@ -127,13 +138,17 @@ section{padding:30px 20px;}
 <p class="desc">🚚 <b>โลจิสติกส์และซัพพลายเชน</b></p>
 
 <a class="download-btn level-pvs"
-   href="files/ปวส/โลจิสติกส์.pdf" download>⬇️ ดาวน์โหลด PDF</a>
+   href="files/ปวส/โลจิสติกส์.pdf" download>
+📄 ดาวน์โหลด PDF
+</a>
 
 <iframe class="viewer"
- src="files/ปวส/โลจิสติกส์.pdf"></iframe>
+  src="files/ปวส/โลจิสติกส์.pdf">
+</iframe>
 
 <p class="note">หมายเหตุ: ใช้เพื่อการศึกษาเท่านั้น</p>
 </div>
+
 </section>
 
 <!-- แบบประเมิน -->
@@ -170,12 +185,12 @@ section{padding:30px 20px;}
 <button id="topBtn" onclick="goTop()">⬆️</button>
 
 <script>
-window.onscroll=()=> {
+window.onscroll = function(){
   document.getElementById("topBtn").style.display =
-  (document.documentElement.scrollTop>300)?"block":"none";
-}
+    (document.documentElement.scrollTop > 300) ? "block" : "none";
+};
 function goTop(){
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo({top:0, behavior:"smooth"});
 }
 </script>
 
