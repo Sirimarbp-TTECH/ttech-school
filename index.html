@@ -2,10 +2,11 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>วิทยาลัยเทคโนโลยีไทย-ไต้หวัน (บีดีไอ)</title>
 
 <style>
-:root {
+:root{
   --main-blue:#0d47a1;
   --sub-blue:#1565c0;
   --soft-yellow:#fff8e1;
@@ -19,7 +20,7 @@ body{
 }
 header,footer{
   background:var(--main-blue);
-  color:white;
+  color:#fff;
   text-align:center;
   padding:20px;
 }
@@ -39,7 +40,7 @@ nav a{
 }
 section{padding:30px 20px;}
 .card{
-  background:white;
+  background:#fff;
   padding:20px;
   border-radius:10px;
   margin-bottom:30px;
@@ -47,16 +48,16 @@ section{padding:30px 20px;}
 .download-btn{
   display:inline-block;
   padding:10px 18px;
-  color:white;
+  color:#fff;
   border-radius:6px;
   text-decoration:none;
   font-weight:bold;
-  margin:8px 0;
+  margin:6px 6px 6px 0;
 }
 .level-pvch{background:var(--pvch);}
 .level-pvs{background:var(--pvs);}
-.desc{font-size:14px;color:#444;}
-.note{font-size:14px;color:#555;}
+.desc{font-size:15px;color:#333;}
+.note{font-size:14px;color:#555;margin-top:8px;}
 .viewer{
   width:100%;
   height:520px;
@@ -85,6 +86,7 @@ th{background:#e3f2fd;}
   border-radius:50%;
   display:none;
   cursor:pointer;
+  font-size:18px;
 }
 </style>
 </head>
@@ -92,22 +94,22 @@ th{background:#e3f2fd;}
 <body>
 
 <header>
-  <img src="images/logo.png" style="height:80px"><br>
+  <img src="images/logo.png" alt="โลโก้วิทยาลัย" style="height:80px"><br>
   <h1>วิทยาลัยเทคโนโลยีไทย-ไต้หวัน (บีดีไอ)</h1>
-  <p>รายวิชาโครงงานฯ</p>
+  <p>รายวิชาโครงงาน</p>
 </header>
 
 <nav>
-  <a href="#pvch">ระดับประกาศนียบัตรวิชาชีพ (ปวช.)</a>
-  <a href="#pvs">ระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</a>
-  <a href="#evaluation">แบบประเมินรายวิชา</a>
-  <a href="#calendar">ปฏิทินการศึกษาในรายวิชา</a>
-  <a href="#contact">ติดต่อสอบถาม</a>
+  <a href="#pvch">ปวช.</a>
+  <a href="#pvs">ปวส.</a>
+  <a href="#evaluation">แบบประเมิน</a>
+  <a href="#calendar">ปฏิทิน</a>
+  <a href="#contact">ติดต่อ</a>
 </nav>
 
 <!-- ================= ปวช ================= -->
 <section id="pvch">
-<h2>📘 ระดับระดับประกาศนียบัตรวิชาชีพ (ปวช.)</h2>
+<h2>📘 ระดับประกาศนียบัตรวิชาชีพ (ปวช.)</h2>
 
 <div class="card">
 <p class="desc">🏭 <b>ช่างกลโรงงาน</b></p>
@@ -181,7 +183,8 @@ th{background:#e3f2fd;}
 <section id="evaluation">
 <div class="card">
 <h2>📝 แบบประเมินรายวิชาโครงงาน</h2>
-<a class="download-btn level-pvch" href="files/แบบประเมิน/คก02.pdf" download>คก.01</a>
+
+<a class="download-btn level-pvch" href="files/แบบประเมิน/คก01.pdf" download>คก.01</a>
 <a class="download-btn level-pvch" href="files/แบบประเมิน/คก02.pdf" download>คก.02</a>
 <a class="download-btn level-pvch" href="files/แบบประเมิน/คก03.pdf" download>คก.03</a>
 <a class="download-btn level-pvch" href="files/แบบประเมิน/คก04.pdf" download>คก.04</a>
@@ -190,19 +193,20 @@ th{background:#e3f2fd;}
 <a class="download-btn level-pvch" href="files/แบบประเมิน/คก07.pdf" download>คก.07</a>
 <a class="download-btn level-pvch" href="files/แบบประเมิน/คก08.pdf" download>คก.08</a>
 <a class="download-btn level-pvch" href="files/แบบประเมิน/คก09.pdf" download>คก.09</a>
+
 </div>
 </section>
 
 <!-- ================= ปฏิทิน ================= -->
 <section id="calendar">
 <div class="card">
-<h2>📅 ปฏิทินการศึกษา</h2>
+<h2>📅 ปฏิทินการศึกษาในรายวิชา</h2>
 <table>
 <tr><th>สัปดาห์</th><th>กิจกรรม</th><th>เอกสาร</th></tr>
 <tr><td>1</td><td>ชี้แจง / เลือกหัวข้อ</td><td>คก.01</td></tr>
 <tr><td>3</td><td>เสนอหัวข้อโครงงาน</td><td>คก.02–03</td></tr>
 <tr><td>6</td><td>สอบบทที่ 1–3</td><td>คก.04–05</td></tr>
-<tr><td>10</td><td>ติดตามงานบทที่ 4-5</td><td>คก.06–07</td></tr>
+<tr><td>10</td><td>ติดตามบทที่ 4–5</td><td>คก.06–07</td></tr>
 <tr><td>15</td><td>สอบป้องกันโครงงาน</td><td>คก.08–09</td></tr>
 </table>
 </div>
@@ -211,9 +215,9 @@ th{background:#e3f2fd;}
 <!-- ================= ติดต่อ ================= -->
 <section id="contact">
 <div class="card">
-<h2>☎️ ติดต่อเรา</h2>
+<h2>☎️ ติดต่อสอบถาม</h2>
 <p><b>วิทยาลัยเทคโนโลยีไทย-ไต้หวัน (บีดีไอ)</b></p>
-<p>โทรศัพท์: 02-337-3101</p>
+<p>โทร: 02-337-3101</p>
 <p>อีเมล: TTECH.BDI@GMAIL.COM</p>
 <p>เวลาทำการ: อังคาร–เสาร์ 08.30–16.30 น.</p>
 </div>
@@ -224,11 +228,14 @@ th{background:#e3f2fd;}
 สังกัดสำนักงานคณะกรรมการการอาชีวศึกษา
 </footer>
 
-<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</button>
+<button id="topBtn" title="กลับขึ้นด้านบน">⬆️</button>
 
 <script>
-window.onscroll=()=>topBtn.style.display=
-(document.documentElement.scrollTop>300)?"block":"none";
+const topBtn=document.getElementById("topBtn");
+window.addEventListener("scroll",()=>{
+  topBtn.style.display=(document.documentElement.scrollTop>300)?"block":"none";
+});
+topBtn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
 </script>
 
 </body>
